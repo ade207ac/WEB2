@@ -7,15 +7,15 @@ $tugas = isset($_POST['tugas']) ? $_POST['tugas'] : 0;
 
 $nilai_total = (0.3 * $uts) + (0.35 * $uas) + (0.35 * $tugas);
 
-$status = ($nilai_total > 55) ? "Lulus" : "Tidak Lulus";
+$status = ($nilai_total > 60) ? "Lulus" : "Tidak Lulus";
 
-if ($nilai_total >= 0 && $nilai_total <= 35) {
+if ($nilai_total >= 0 && $nilai_total <= 40) {
     $grade = "E";
-} elseif ($nilai_total >= 36 && $nilai_total <= 55) {
+} elseif ($nilai_total >= 45 && $nilai_total <= 60) {
     $grade = "D";
-} elseif ($nilai_total >= 56 && $nilai_total <= 69) {
+} elseif ($nilai_total >= 59 && $nilai_total <= 69) {
     $grade = "C";
-} elseif ($nilai_total >= 70 && $nilai_total <= 84) {
+} elseif ($nilai_total >= 75 && $nilai_total <= 85) {
     $grade = "B";
 } elseif ($nilai_total >= 85 && $nilai_total <= 100) {
     $grade = "A";
@@ -25,7 +25,7 @@ if ($nilai_total >= 0 && $nilai_total <= 35) {
 
 switch ($grade) {
     case "E":
-        $predikat = "Sangat Kurang";
+        $predikat = "Kurang banget";
         break;
     case "D":
         $predikat = "Kurang";
@@ -34,10 +34,10 @@ switch ($grade) {
         $predikat = "Cukup";
         break;
     case "B":
-        $predikat = "Memuaskan";
+        $predikat = "bagus";
         break;
     case "A":
-        $predikat = "Sangat Memuaskan";
+        $predikat = "Sangat bagus";
         break;
     default:
         $predikat = "Tidak Ada";
